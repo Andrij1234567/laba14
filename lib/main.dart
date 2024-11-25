@@ -71,9 +71,10 @@ class _TimeScreenState extends State<TimeScreen> {
             ),
             SizedBox(height: 30),
 
-            _image == null
-                ? Text('No image selected.')
-                : Image.file(_image!),
+          if (_image == null)
+            Text('No image selected.') 
+          else
+            Image.file(_image!),
           ],
         ),
       ),
